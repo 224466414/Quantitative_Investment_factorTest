@@ -1,0 +1,1750 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>交易量变异系数 CVofVolume | 量化选股因子 检验结果</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="量化投资班二期 第1组">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-back-to-top-button/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-code/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-auto-scroll-table/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../Liquidity/CVofVolume/CVofVolume_quotely_5min/CVofVolume_quotely_5min.html" />
+    
+    
+    <link rel="prev" href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_daily_240days/AverageIlliquidity_daily_240days.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.4"
+        data-chapter-title="交易量变异系数 CVofVolume"
+        data-filepath="Liquidity/CVofVolume/CVofVolume.md"
+        data-basepath="../.."
+        data-revision="Wed Aug 04 2021 13:36:16 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="https://224466414.github.io/Quantitative_Investment_factorTest/" target="blank" class="custom-link">Home</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="Pattern/Pattern.html">
+            
+                
+                    <a href="../../Pattern/Pattern.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        形态 Pattern
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="Pattern/SmartMoney/SmartMoney.html">
+            
+                
+                    <a href="../../Pattern/SmartMoney/SmartMoney.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        聪明钱 SmartMoney
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="Pattern/SmartMoney/SmartMoney_quotely_5min/SmartMoney_quotely_5min.html">
+            
+                
+                    <a href="../../Pattern/SmartMoney/SmartMoney_quotely_5min/SmartMoney_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        SmartMoney_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Pattern/AveragePriceBias/AveragePriceBias.html">
+            
+                
+                    <a href="../../Pattern/AveragePriceBias/AveragePriceBias.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        平均价格偏差 AveragePriceBias
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Pattern/AveragePriceBias/AveragePriceBias_quotely_5min/AveragePriceBias_quotely_5min.html">
+            
+                
+                    <a href="../../Pattern/AveragePriceBias/AveragePriceBias_quotely_5min/AveragePriceBias_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        AveragePriceBias_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Pattern/RelativePricePosition/RelativePricePosition.html">
+            
+                
+                    <a href="../../Pattern/RelativePricePosition/RelativePricePosition.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        相对价格位置 RelativePricePosition
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Pattern/RelativePricePosition/RelativePricePosition_quotely_5min/RelativePricePosition_quotely_5min.html">
+            
+                
+                    <a href="../../Pattern/RelativePricePosition/RelativePricePosition_quotely_5min/RelativePricePosition_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        RelativePricePosition_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Momentum/Momentum.html">
+            
+                
+                    <a href="../../Momentum/Momentum.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        动量 Momentum
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Momentum/ReturnMomentum/ReturnMomentum.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum/ReturnMomentum.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        收益动量 ReturnMomentum
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="Momentum/ReturnMomentum/ReturnMomentum_daily_1days/ReturnMomentum_daily_1days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum/ReturnMomentum_daily_1days/ReturnMomentum_daily_1days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        ReturnMomentum_daily_1days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Momentum/ReturnMomentum/ReturnMomentum_daily_5days/ReturnMomentum_daily_5days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum/ReturnMomentum_daily_5days/ReturnMomentum_daily_5days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        ReturnMomentum_daily_5days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Momentum/ReturnMomentum/ReturnMomentum_daily_20days/ReturnMomentum_daily_20days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum/ReturnMomentum_daily_20days/ReturnMomentum_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                        ReturnMomentum_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="Momentum/ReturnMomentum/ReturnMomentum_daily_60days/ReturnMomentum_daily_60days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum/ReturnMomentum_daily_60days/ReturnMomentum_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.4.</b>
+                        
+                        ReturnMomentum_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="Momentum/ReturnMomentum/ReturnMomentum_daily_120days/ReturnMomentum_daily_120days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum/ReturnMomentum_daily_120days/ReturnMomentum_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.5.</b>
+                        
+                        ReturnMomentum_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Momentum/ReturnMomentum_lag/ReturnMomentum_lag.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum_lag/ReturnMomentum_lag.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        收益动量滞后 ReturnMomentum_lag
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="Momentum/ReturnMomentum_lag/ReturnMomentum_lag5_daily_20days/ReturnMomentum_lag5_daily_20days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum_lag/ReturnMomentum_lag5_daily_20days/ReturnMomentum_lag5_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        ReturnMomentum_lag5_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="Momentum/ReturnMomentum_lag/ReturnMomentum_lag5_daily_60days/ReturnMomentum_lag5_daily_60days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum_lag/ReturnMomentum_lag5_daily_60days/ReturnMomentum_lag5_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        ReturnMomentum_lag5_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="Momentum/ReturnMomentum_lag/ReturnMomentum_lag5_daily_120days/ReturnMomentum_lag5_daily_120days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum_lag/ReturnMomentum_lag5_daily_120days/ReturnMomentum_lag5_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        ReturnMomentum_lag5_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="Momentum/ReturnMomentum_lag/ReturnMomentum_lag20_daily_60days/ReturnMomentum_lag20_daily_60days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum_lag/ReturnMomentum_lag20_daily_60days/ReturnMomentum_lag20_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        ReturnMomentum_lag20_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="Momentum/ReturnMomentum_lag/ReturnMomentum_lag20_daily_120days/ReturnMomentum_lag20_daily_120days.html">
+            
+                
+                    <a href="../../Momentum/ReturnMomentum_lag/ReturnMomentum_lag20_daily_120days/ReturnMomentum_lag20_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                        ReturnMomentum_lag20_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Momentum/MaxDuringReturn/MaxDuringReturn.html">
+            
+                
+                    <a href="../../Momentum/MaxDuringReturn/MaxDuringReturn.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        区间最大收益 MaxDuringReturn
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="Momentum/MaxDuringReturn/MaxDuringReturn_daily_20days/MaxDuringReturn_daily_20days.html">
+            
+                
+                    <a href="../../Momentum/MaxDuringReturn/MaxDuringReturn_daily_20days/MaxDuringReturn_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        MaxDuringReturn_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="Momentum/MaxDuringReturn/MaxDuringReturn_daily_60days/MaxDuringReturn_daily_60days.html">
+            
+                
+                    <a href="../../Momentum/MaxDuringReturn/MaxDuringReturn_daily_60days/MaxDuringReturn_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        MaxDuringReturn_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="Momentum/MaxDuringReturn/MaxDuringReturn_daily_120days/MaxDuringReturn_daily_120days.html">
+            
+                
+                    <a href="../../Momentum/MaxDuringReturn/MaxDuringReturn_daily_120days/MaxDuringReturn_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        MaxDuringReturn_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="Momentum/MaxDuringReturn/MaxDuringReturn_daily_240days/MaxDuringReturn_daily_240days.html">
+            
+                
+                    <a href="../../Momentum/MaxDuringReturn/MaxDuringReturn_daily_240days/MaxDuringReturn_daily_240days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.4.</b>
+                        
+                        MaxDuringReturn_daily_240days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Elasticity/Elasticity.html">
+            
+                
+                    <a href="../../Elasticity/Elasticity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        弹性 Elasticity
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Elasticity/Beta/Beta.html">
+            
+                
+                    <a href="../../Elasticity/Beta/Beta.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        贝塔 Beta
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="Elasticity/Beta/Beta_quotely_5min/Beta_quotely_5min.html">
+            
+                
+                    <a href="../../Elasticity/Beta/Beta_quotely_5min/Beta_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        Beta_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="Elasticity/Beta/Beta_daily_20days/Beta_daily_20days.html">
+            
+                
+                    <a href="../../Elasticity/Beta/Beta_daily_20days/Beta_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        Beta_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="Elasticity/Beta/Beta_daily_60days/Beta_daily_60days.html">
+            
+                
+                    <a href="../../Elasticity/Beta/Beta_daily_60days/Beta_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.3.</b>
+                        
+                        Beta_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="Elasticity/Beta/Beta_daily_120days/Beta_daily_120days.html">
+            
+                
+                    <a href="../../Elasticity/Beta/Beta_daily_120days/Beta_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.4.</b>
+                        
+                        Beta_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Elasticity/RelativeBeta/RelativeBeta.html">
+            
+                
+                    <a href="../../Elasticity/RelativeBeta/RelativeBeta.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        相对贝塔 RelativeBeta
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="Elasticity/RelativeBeta/RelativeBeta_quotely_5min/RelativeBeta_quotely_5min.html">
+            
+                
+                    <a href="../../Elasticity/RelativeBeta/RelativeBeta_quotely_5min/RelativeBeta_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        RelativeBeta_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="Elasticity/RelativeBeta/RelativeBeta_daily_60days/RelativeBeta_daily_60days.html">
+            
+                
+                    <a href="../../Elasticity/RelativeBeta/RelativeBeta_daily_60days/RelativeBeta_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        RelativeBeta_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="Liquidity/Liquidity.html">
+            
+                
+                    <a href="../../Liquidity/Liquidity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        流动性 Liquidity
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="Liquidity/AverageVolume/AverageVolume.html">
+            
+                
+                    <a href="../../Liquidity/AverageVolume/AverageVolume.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        平均交易量 AverageVolume
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="Liquidity/AverageVolume/AverageVolume_daily_20days/AverageVolume_daily_20days.html">
+            
+                
+                    <a href="../../Liquidity/AverageVolume/AverageVolume_daily_20days/AverageVolume_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.1.</b>
+                        
+                        AverageVolume_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="Liquidity/AverageVolume/AverageVolume_daily_60days/AverageVolume_daily_60days.html">
+            
+                
+                    <a href="../../Liquidity/AverageVolume/AverageVolume_daily_60days/AverageVolume_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.</b>
+                        
+                        AverageVolume_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="Liquidity/AverageVolume/AverageVolume_daily_120days/AverageVolume_daily_120days.html">
+            
+                
+                    <a href="../../Liquidity/AverageVolume/AverageVolume_daily_120days/AverageVolume_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.3.</b>
+                        
+                        AverageVolume_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="Liquidity/AverageVolume/AverageVolume_daily_240days/AverageVolume_daily_240days.html">
+            
+                
+                    <a href="../../Liquidity/AverageVolume/AverageVolume_daily_240days/AverageVolume_daily_240days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.4.</b>
+                        
+                        AverageVolume_daily_240days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Liquidity/AverageTurnoverRate/AverageTurnoverRate.html">
+            
+                
+                    <a href="../../Liquidity/AverageTurnoverRate/AverageTurnoverRate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        平均换手率 AverageTurnoverRate
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_1days/AverageTurnoverRate_daily_1days.html">
+            
+                
+                    <a href="../../Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_1days/AverageTurnoverRate_daily_1days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.1.</b>
+                        
+                        AverageTurnoverRate_daily_1days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_20days/AverageTurnoverRate_daily_20days.html">
+            
+                
+                    <a href="../../Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_20days/AverageTurnoverRate_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.2.</b>
+                        
+                        AverageTurnoverRate_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_60days/AverageTurnoverRate_daily_60days.html">
+            
+                
+                    <a href="../../Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_60days/AverageTurnoverRate_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.3.</b>
+                        
+                        AverageTurnoverRate_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_120days/AverageTurnoverRate_daily_120days.html">
+            
+                
+                    <a href="../../Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_120days/AverageTurnoverRate_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.4.</b>
+                        
+                        AverageTurnoverRate_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_240days/AverageTurnoverRate_daily_240days.html">
+            
+                
+                    <a href="../../Liquidity/AverageTurnoverRate/AverageTurnoverRate_daily_240days/AverageTurnoverRate_daily_240days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.5.</b>
+                        
+                        AverageTurnoverRate_daily_240days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Liquidity/AverageIlliquidity/AverageIlliquidity.html">
+            
+                
+                    <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        平均非流动性因子 AverageIlliquidity
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="Liquidity/AverageIlliquidity/AverageIlliquidity_quotely_5min/AverageIlliquidity_quotely_5min.html">
+            
+                
+                    <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_quotely_5min/AverageIlliquidity_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.1.</b>
+                        
+                        AverageIlliquidity_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="Liquidity/AverageIlliquidity/AverageIlliquidity_daily_20days/AverageIlliquidity_daily_20days.html">
+            
+                
+                    <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_daily_20days/AverageIlliquidity_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.2.</b>
+                        
+                        AverageIlliquidity_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="Liquidity/AverageIlliquidity/AverageIlliquidity_daily_60days/AverageIlliquidity_daily_60days.html">
+            
+                
+                    <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_daily_60days/AverageIlliquidity_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.3.</b>
+                        
+                        AverageIlliquidity_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="Liquidity/AverageIlliquidity/AverageIlliquidity_daily_120days/AverageIlliquidity_daily_120days.html">
+            
+                
+                    <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_daily_120days/AverageIlliquidity_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.4.</b>
+                        
+                        AverageIlliquidity_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="Liquidity/AverageIlliquidity/AverageIlliquidity_daily_240days/AverageIlliquidity_daily_240days.html">
+            
+                
+                    <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_daily_240days/AverageIlliquidity_daily_240days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.5.</b>
+                        
+                        AverageIlliquidity_daily_240days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="Liquidity/CVofVolume/CVofVolume.html">
+            
+                
+                    <a href="../../Liquidity/CVofVolume/CVofVolume.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        交易量变异系数 CVofVolume
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="Liquidity/CVofVolume/CVofVolume_quotely_5min/CVofVolume_quotely_5min.html">
+            
+                
+                    <a href="../../Liquidity/CVofVolume/CVofVolume_quotely_5min/CVofVolume_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.1.</b>
+                        
+                        CVofVolume_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.2" data-path="Liquidity/CVofVolume/CVofVolume_daily_20days/CVofVolume_daily_20days.html">
+            
+                
+                    <a href="../../Liquidity/CVofVolume/CVofVolume_daily_20days/CVofVolume_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.2.</b>
+                        
+                        CVofVolume_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.3" data-path="Liquidity/CVofVolume/CVofVolume_daily_60days/CVofVolume_daily_60days.html">
+            
+                
+                    <a href="../../Liquidity/CVofVolume/CVofVolume_daily_60days/CVofVolume_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.3.</b>
+                        
+                        CVofVolume_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.4" data-path="Liquidity/CVofVolume/CVofVolume_daily_120days/CVofVolume_daily_120days.html">
+            
+                
+                    <a href="../../Liquidity/CVofVolume/CVofVolume_daily_120days/CVofVolume_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.4.</b>
+                        
+                        CVofVolume_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.5" data-path="Liquidity/CVofVolume/CVofVolume_daily_240days/CVofVolume_daily_240days.html">
+            
+                
+                    <a href="../../Liquidity/CVofVolume/CVofVolume_daily_240days/CVofVolume_daily_240days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.5.</b>
+                        
+                        CVofVolume_daily_240days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Liquidity/CVofTurnoverRate/CVofTurnoverRate.html">
+            
+                
+                    <a href="../../Liquidity/CVofTurnoverRate/CVofTurnoverRate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        换手率变异系数 CVofTurnoverRate
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="Liquidity/CVofTurnoverRate/CVofTurnoverRate_quotely_5min/CVofTurnoverRate_quotely_5min.html">
+            
+                
+                    <a href="../../Liquidity/CVofTurnoverRate/CVofTurnoverRate_quotely_5min/CVofTurnoverRate_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.1.</b>
+                        
+                        CVofTurnoverRate_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_20days/CVofTurnoverRate_daily_20days.html">
+            
+                
+                    <a href="../../Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_20days/CVofTurnoverRate_daily_20days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.</b>
+                        
+                        CVofTurnoverRate_daily_20days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_60days/CVofTurnoverRate_daily_60days.html">
+            
+                
+                    <a href="../../Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_60days/CVofTurnoverRate_daily_60days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.3.</b>
+                        
+                        CVofTurnoverRate_daily_60days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_120days/CVofTurnoverRate_daily_120days.html">
+            
+                
+                    <a href="../../Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_120days/CVofTurnoverRate_daily_120days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.4.</b>
+                        
+                        CVofTurnoverRate_daily_120days
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.5" data-path="Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_240days/CVofTurnoverRate_daily_240days.html">
+            
+                
+                    <a href="../../Liquidity/CVofTurnoverRate/CVofTurnoverRate_daily_240days/CVofTurnoverRate_daily_240days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.5.</b>
+                        
+                        CVofTurnoverRate_daily_240days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Liquidity/CVofIlliquidity/CVofIlliquidity.html">
+            
+                
+                    <a href="../../Liquidity/CVofIlliquidity/CVofIlliquidity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        非流动性因子变异系数 CVofIlliquidity
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="Liquidity/CVofIlliquidity/CVofIlliquidity_quotely_5min/CVofIlliquidity_quotely_5min.html">
+            
+                
+                    <a href="../../Liquidity/CVofIlliquidity/CVofIlliquidity_quotely_5min/CVofIlliquidity_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.1.</b>
+                        
+                        CVofIlliquidity_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="Liquidity/ShortCutIlliquidity/ShortCutIlliquidity.html">
+            
+                
+                    <a href="../../Liquidity/ShortCutIlliquidity/ShortCutIlliquidity.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        最短K线距离计算的非流动因子 ShortCutIlliquidity
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="Liquidity/ShortCutIlliquidity/ShortCutIlliquidity_quotely_5min/ShortCutIlliquidity_quotely_5min.html">
+            
+                
+                    <a href="../../Liquidity/ShortCutIlliquidity/ShortCutIlliquidity_quotely_5min/ShortCutIlliquidity_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.1.</b>
+                        
+                        ShortCutIlliquidity_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="Liquidity/ShortCutIlliquidity/ShortCutIlliquidity_daily_5days/ShortCutIlliquidity_daily_5days.html">
+            
+                
+                    <a href="../../Liquidity/ShortCutIlliquidity/ShortCutIlliquidity_daily_5days/ShortCutIlliquidity_daily_5days.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.2.</b>
+                        
+                        ShortCutIlliquidity_daily_5days
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="Volatility/Volatility.html">
+            
+                
+                    <a href="../../Volatility/Volatility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        波动性 Volatility
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="Volatility/ReturnVol/ReturnVol.html">
+            
+                
+                    <a href="../../Volatility/ReturnVol/ReturnVol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        总收益波动性 ReturnVol
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="Volatility/ReturnVol/ReturnVol_quotely_5min/ReturnVol_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/ReturnVol/ReturnVol_quotely_5min/ReturnVol_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.1.</b>
+                        
+                        ReturnVol_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="Volatility/ReturnSkew/ReturnSkew.html">
+            
+                
+                    <a href="../../Volatility/ReturnSkew/ReturnSkew.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        总收益偏度 ReturnSkew
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="Volatility/ReturnSkew/ReturnSkew_quotely_5min/ReturnSkew_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/ReturnSkew/ReturnSkew_quotely_5min/ReturnSkew_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        ReturnSkew_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="Volatility/ReturnKurt/ReturnKurt.html">
+            
+                
+                    <a href="../../Volatility/ReturnKurt/ReturnKurt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        总收益峰度 ReturnKurt
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="Volatility/ReturnKurt/ReturnKurt_quotely_5min/ReturnKurt_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/ReturnKurt/ReturnKurt_quotely_5min/ReturnKurt_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.1.</b>
+                        
+                        ReturnKurt_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="Volatility/iDReturnVol/iDReturnVol.html">
+            
+                
+                    <a href="../../Volatility/iDReturnVol/iDReturnVol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        特质收益波动性 iDReturnVol
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.4.1" data-path="Volatility/iDReturnVol/iDReturnVol_quotely_5min/iDReturnVol_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/iDReturnVol/iDReturnVol_quotely_5min/iDReturnVol_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.1.</b>
+                        
+                        iDReturnVol_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="Volatility/iDReturnSkew/iDReturnSkew.html">
+            
+                
+                    <a href="../../Volatility/iDReturnSkew/iDReturnSkew.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        特质收益偏度 iDReturnSkew
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.5.1" data-path="Volatility/iDReturnSkew/iDReturnSkew_quotely_5min/iDReturnSkew_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/iDReturnSkew/iDReturnSkew_quotely_5min/iDReturnSkew_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.1.</b>
+                        
+                        iDReturnSkew_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="Volatility/iDReturnKurt/iDReturnKurt.html">
+            
+                
+                    <a href="../../Volatility/iDReturnKurt/iDReturnKurt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        特质收益峰度 iDReturnKurt
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.6.1" data-path="Volatility/iDReturnKurt/iDReturnKurt_quotely_5min/iDReturnKurt_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/iDReturnKurt/iDReturnKurt_quotely_5min/iDReturnKurt_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.1.</b>
+                        
+                        iDReturnKurt_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="Volatility/VolumeVol/VolumeVol.html">
+            
+                
+                    <a href="../../Volatility/VolumeVol/VolumeVol.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        交易量波动性 VolumeVol
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.7.1" data-path="Volatility/VolumeVol/VolumeVol_quotely_5min/VolumeVol_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/VolumeVol/VolumeVol_quotely_5min/VolumeVol_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.1.</b>
+                        
+                        VolumeVol_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="Volatility/VolumeSkew/VolumeSkew.html">
+            
+                
+                    <a href="../../Volatility/VolumeSkew/VolumeSkew.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        交易量偏度 VolumeSkew
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.8.1" data-path="Volatility/VolumeSkew/VolumeSkew_quotely_5min/VolumeSkew_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/VolumeSkew/VolumeSkew_quotely_5min/VolumeSkew_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.1.</b>
+                        
+                        VolumeSkew_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="Volatility/VolumeKurt/VolumeKurt.html">
+            
+                
+                    <a href="../../Volatility/VolumeKurt/VolumeKurt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        交易量峰度 VolumeKurt
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.9.1" data-path="Volatility/VolumeKurt/VolumeKurt_quotely_5min/VolumeKurt_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/VolumeKurt/VolumeKurt_quotely_5min/VolumeKurt_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.1.</b>
+                        
+                        VolumeKurt_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="Volatility/VolumeHHI/VolumeHHI.html">
+            
+                
+                    <a href="../../Volatility/VolumeHHI/VolumeHHI.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        交易量离散度 VolumeHHI
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.10.1" data-path="Volatility/VolumeHHI/VolumeHHI_quotely_5min/VolumeHHI_quotely_5min.html">
+            
+                
+                    <a href="../../Volatility/VolumeHHI/VolumeHHI_quotely_5min/VolumeHHI_quotely_5min.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.1.</b>
+                        
+                        VolumeHHI_quotely_5min
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >量化选股因子 检验结果</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../Liquidity/AverageIlliquidity/AverageIlliquidity_daily_240days/AverageIlliquidity_daily_240days.html" class="navigation navigation-prev " aria-label="Previous page: AverageIlliquidity_daily_240days"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../Liquidity/CVofVolume/CVofVolume_quotely_5min/CVofVolume_quotely_5min.html" class="navigation navigation-next " aria-label="Next page: CVofVolume_quotely_5min"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-back-to-top-button/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-code/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"back-to-top-button":{},"chapter-fold":{},"expandable-chapters":{},"splitter":{},"popup":{},"code":{"copyButtons":true},"auto-scroll-table":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
